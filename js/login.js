@@ -26,7 +26,7 @@ form.addEventListener("submit", async function (event) {
       localStorage.setItem("user", JSON.stringify({ id, username, email }));
       alert("User found! Redirecting...");
 
-      window.location.href = "/pages/home.html";
+      window.location.href = "/pages/index.html";
     } else {
       alert("Invalid email or password.");
     }
