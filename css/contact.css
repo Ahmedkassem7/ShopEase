@@ -1,0 +1,85 @@
+ .gradient-section {
+     background: linear-gradient(to bottom, #f5f3ff, #ffffff);
+     padding: 5rem 1rem;
+ }
+
+ .btn-purple {
+     background-color: #7c3aed;
+     color: white;
+
+     font-size: 1.125rem;
+     border-radius: 0.5rem;
+ }
+
+ .btn-purple:hover {
+     background-color: #6b21a8;
+ }
+
+ @media (min-width: 768px) {
+     .header-title {
+         font-size: 3rem;
+     }
+
+     .header-subtitle {
+         font-size: 1.25rem;
+     }
+ }
+
+
+ .info-card {
+     transition: box-shadow 0.3s ease-in-out;
+ }
+
+ .info-card:hover {
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+ }
+
+ .icon-circle {
+     width: 3rem;
+     height: 3rem;
+     background-color: #ede9fe;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 0 auto 1rem;
+ }
+
+ .icon-circle svg {
+     color: #7c3aed;
+ }
+
+ .contact-form {
+     max-width: 600px;
+     background: white;
+     padding: 2rem;
+     border-radius: 1rem;
+     box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+ }
+
+ .btn-purple {
+     background-color: #7c3aed;
+     color: white;
+ }
+
+ .btn-purple:hover {
+     background-color: #6b21a8;
+ }
+
+ .toast {
+     position: fixed;
+     top: 20px;
+     right: 20px;
+     min-width: 250px;
+     padding: 1rem;
+     background: #28a745;
+     color: white;
+     border-radius: 0.5rem;
+     z-index: 1055;
+     opacity: 0;
+     transition: opacity 0.3s ease-in-out;
+ }
+
+ .toast.show {
+     opacity: 1;
+ }

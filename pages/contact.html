@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/contact.css">
+</head>
+
+<body>
+  <!-- -----------<NAVBAR>----------- -->
+  <div class="container">
+    <nav class="bg-white border-bottom px-3 py-3 d-flex">
+      <div class="">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">ShopEase</a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler ms-auto" id="toggleBtn">☰</button>
+      </div>
+
+      <!-- Collapsible Content -->
+      <div class="navbar-collapse" id="navbarContent">
+        <!-- Center Nav Links -->
+        <ul class="navbar-nav nav-links d-flex flex-column flex-lg-row mx-lg-auto text-center text-lg-start">
+          <li class="nav-item">
+            <a class="nav-link" href="./home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Right Icons -->
+        <div class="d-flex align-items-center nav-icons mt-2 mt-lg-0">
+          <i class="bi bi-search"></i>
+          <a href="./register.html " class="text-reset"><i class="bi bi-person"></i></a>
+          <a href="./cart.html" class="text-reset"><i class="bi bi-bag"></i></a>
+
+
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- -----------<TOUCH>----------- -->
+  <div className="min-h-screen bg-gray-50">
+    <div class="gradient-section text-center">
+      <div class="container max-w-4xl mx-auto">
+        <h1 class="fw-bold text-gray-900 mb-3 header-title">Get in Touch</h1>
+        <p class="text-muted mb-5 header-subtitle mx-auto" style="max-width: 40rem;">
+          Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+        </p>
+        <button class="btn btn-purple py-2 px-3" onclick="scrollToContactForm()">
+          Contact Us Now
+        </button>
+      </div>
+    </div>
+
+    <!-- <div style="height: 800px;"></div>  -->
+    <!-- <div id="contact-form">  -->
+  </div>
+  <!-- -----------<FORM>----------- -->
+  <div className=" mx-auto px-4">
+    <div class="container py-5">
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-12 col-md-4">
+          <div class="text-center p-4 bg-white rounded-4 shadow info-card h-100">
+            <div class="icon-circle">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <h3 class="h5 fw-semibold mb-2">Visit Us</h3>
+            <p class="text-muted mb-0">
+              123 Business Street<br>
+              San Francisco, CA 94111
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="text-center p-4 bg-white rounded-4 shadow info-card h-100">
+            <div class="icon-circle">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <h3 class="h5 fw-semibold mb-2">Call Us</h3>
+            <p class="text-muted mb-0">
+              +1 (555) 123-4567<br>
+              Mon-Fri, 9AM-6PM
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="text-center p-4 bg-white rounded-4 shadow info-card h-100">
+            <div class="icon-circle">
+              <i class="bi bi-envelope-fill"></i>
+            </div>
+            <h3 class="h5 fw-semibold mb-2">Email Us</h3>
+            <p class="text-muted mb-0">
+              contact@company.com<br>
+              support@company.com
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="container d-flex justify-content-center align-items-center form-wrapper mb-5">
+      <form id="contactForm" class="contact-form col-12 col-md-8 col-lg-5">
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" required placeholder="John Doe">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required placeholder="john@example.com">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Subject</label>
+          <input type="text" class="form-control" id="subject" required placeholder="How can we help?">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="5" required placeholder="Your message here..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-purple w-100 py-3">Send Message</button>
+      </form>
+    </div>
+    <div id="toast" class="toast ">Message sent successfully! We'll get back to you soon.</div>
+  </div>
+  <!-- -----------<FOOTER>----------- -->
+  <footer class="bg-dark text-light py-5">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- Logo and Description -->
+        <div>
+          <h5 class="text-white mb-3">ShopEase</h5>
+          <p>
+            Your one-stop solution for all your shopping needs with the best
+            prices and quality products.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-light"><i class="bi bi-facebook fs-5"></i></a>
+            <a href="#" class="text-light"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="#" class="text-light"><i class="bi bi-twitter-x fs-5"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h6 class="text-white mb-3">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-light text-decoration-none d-block mb-1">Home</a>
+            </li>
+            <li>
+              <a href="#" class="text-light text-decoration-none d-block mb-1">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="text-light text-decoration-none d-block mb-1">Products</a>
+            </li>
+            <li>
+              <a href="#" class="text-light text-decoration-none d-block mb-1">Categories</a>
+            </li>
+            <li>
+              <a href="#" class="text-light text-decoration-none d-block">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Customer Support -->
+        <div>
+          <h6 class="text-white mb-3">Customer Support</h6>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-light text-decoration-none d-block mb-1">FAQ</a>
+            </li>
+            <li>
+              <a href="#" class="text-light text-decoration-none d-block mb-1">Shipping Policy</a>
+            </li>
+            <li>
+              <a href="#" class="text-light text-decoration-none d-block mb-1">Returns & Refunds</a>
+            </li>
+            <li>
+              <a href="#" class="text-light text-decoration-none d-block mb-1">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#" class="text-light text-decoration-none d-block">Terms & Conditions</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h6 class="text-white mb-3">Contact Information</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <span class="me-2">📍</span>123 Commerce St, New York, NY 10001
+            </li>
+            <li class="mb-2">
+              <span class="me-2">📱</span>+1 (555) 123-4567
+            </li>
+            <li class="mb-2">
+              <span class="me-2">✉️</span>support@shopease.com
+            </li>
+            <li><span class="me-2">⏰</span>Mon-Fri: 9AM-6PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-top border-secondary mt-5 pt-3 text-center small text-white">
+        <p class="mb-0">
+          &copy; <span id="year"></span> ShopEase. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/contact.js"></script>
+  <script src="../js/register.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+.test {
+    background-image: url(../assets/images/pool.webp);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    color: white;
+
+    /* border-radius: 10px; */
+    h2 {
+        font-size: 2.25rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+        line-height: calc(1.75 / 1.25);
+    }
+
+
+}
+
+@media screen and (min-width: 768px) {
+    .me-lg-shop {
+        margin-right: 20rem !important;
+    }
+}
+
+
+.product_container {
+    .cover {
+        height: 50%;
+    }
+
+    .image-container {
+        border: 2px solid#ebe6e7;
+        border-radius: 10px;
+
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover; */
+    }
+
+    .product-size button {
+        background-color: white;
+        border: 1px solid #ebe6e7;
+        color: black;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+
+    /* Hover effect only when not selected */
+    .product-size button:hover:not(.selected) {
+        background-color: #f8f8f8;
+    }
+
+    /* Selected style */
+    .product-size button.selected {
+        background-color: #0d6efd !important;
+        color: white;
+        border-color: #0d6efd;
+    }
+}
+
+
+#notFound {
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    /* عشان ما يستقبلش ضغطات وهو مخفي */
+}
+
+#notFound.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    min-width: 250px;
+    padding: 1rem;
+    background: #28a745;
+    color: white;
+    border-radius: 0.5rem;
+    z-index: 1055;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+
+#loadingSpinner {
+    min-height: 300px;
+}

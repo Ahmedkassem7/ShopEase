@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <!-- -----------<NAVBAR>----------- -->
+    <div class="container">
+        <nav class="bg-white border-bottom px-3 py-3 d-flex">
+            <div class="">
+                <!-- Brand -->
+                <a class="navbar-brand" href="#">ShopEase</a>
+
+                <!-- Toggler -->
+                <button class="navbar-toggler ms-auto" id="toggleBtn">☰</button>
+            </div>
+
+            <!-- Collapsible Content -->
+            <div class="navbar-collapse" id="navbarContent">
+                <!-- Center Nav Links -->
+                <ul class="navbar-nav nav-links d-flex flex-column flex-lg-row mx-lg-auto text-center text-lg-start">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Right Icons -->
+                <div class="d-flex align-items-center nav-icons mt-2 mt-lg-0">
+                    <i class="bi bi-search"></i>
+                    <a href="./register.html " class="text-reset"><i class="bi bi-person"></i></a>
+                    <a href="./cart.html" class="text-reset"><i class="bi bi-bag"></i></a>
+
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="container py-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./home.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+            </ol>
+        </nav>
+        <!-- -----------<CART TABLE>----------- -->
+        <div class="table-responsive mb-4">
+            <table class="table bg-white">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <!-- -----------<ACTIONS>----------- -->
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <a href="./products.html" class="btn btn-outline-secondary px-4">Return To Shop</a>
+            </div>
+
+        </div>
+
+        <!-- Coupon and Cart Totals -->
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="d-flex gap-2">
+                    <input type="text" class="form-control" placeholder="Enter coupon code">
+                    <button class="btn btn-danger px-4">Apply Coupon</button>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <h5 class="card-title mb-4">Cart Summary</h5>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="text-muted">Subtotal</span>
+                            <span class="fw-medium" id="cart-subtotal">$1,750</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="text-muted">Shipping</span>
+                            <span class="text-success fw-medium">Free</span>
+                        </div>
+                        <hr class="my-4">
+                        <div class="d-flex justify-content-between mb-4">
+                            <span class="h6 mb-0">Total</span>
+                            <span class="h5 mb-0 text-danger" id="cart-total">$1,750</span>
+                        </div>
+                        <button class="btn btn-danger w-100 py-3 fw-medium">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top-btn" onclick="scrollToTop()">
+        <i class="bi bi-arrow-up"></i>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div>
+                    <h5 class="text-white mb-3">ShopEase</h5>
+                    <p>
+                        Your one-stop solution for all your shopping needs with the best
+                        prices and quality products.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-light"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-twitter-x fs-5"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h6 class="text-white mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="text-light text-decoration-none d-block mb-1">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-light text-decoration-none d-block mb-1">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-light text-decoration-none d-block mb-1">Products</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-light text-decoration-none d-block mb-1">Categories</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-light text-decoration-none d-block">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h6 class="text-white mb-3">Customer Support</h6>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="text-light text-decoration-none d-block mb-1">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-light text-decoration-none d-block mb-1">Shipping Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-light text-decoration-none d-block mb-1">Returns & Refunds</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-light text-decoration-none d-block mb-1">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-light text-decoration-none d-block">Terms & Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h6 class="text-white mb-3">Contact Information</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <span class="me-2">📍</span>123 Commerce St, New York, NY 10001
+                        </li>
+                        <li class="mb-2">
+                            <span class="me-2">📱</span>+1 (555) 123-4567
+                        </li>
+                        <li class="mb-2">
+                            <span class="me-2">✉️</span>support@shopease.com
+                        </li>
+                        <li><span class="me-2">⏰</span>Mon-Fri: 9AM-6PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-top border-secondary mt-5 pt-3 text-center small text-white">
+                <p class="mb-0">
+                    &copy; <span id="year"></span> ShopEase. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="container newsletter-container"></div>
+    <script src="../js/cart.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
