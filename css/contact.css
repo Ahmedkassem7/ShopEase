@@ -1,10 +1,11 @@
  .gradient-section {
-     background: linear-gradient(to bottom, #f5f3ff, #ffffff);
+     /* background: linear-gradient(to bottom, #f5f3ff, #ffffff); */
+     background: linear-gradient(to bottom, #f0ebebbf, #ffffff);
      padding: 5rem 1rem;
  }
 
  .btn-purple {
-     background-color: #7c3aed;
+     background-color: #ed3434;
      color: white;
 
      font-size: 1.125rem;
@@ -12,7 +13,7 @@
  }
 
  .btn-purple:hover {
-     background-color: #6b21a8;
+     background-color: #ed5d5d;
  }
 
  @media (min-width: 768px) {
@@ -37,7 +38,8 @@
  .icon-circle {
      width: 3rem;
      height: 3rem;
-     background-color: #ede9fe;
+     background-color: #ea384c;
+     color: white;
      border-radius: 50%;
      display: flex;
      align-items: center;
