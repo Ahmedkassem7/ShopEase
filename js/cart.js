@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const currentUser = JSON.parse(localStorage.getItem("user"));
   if (!currentUser) {
     alert("You must login first.");
+
+    window.location.href = "/pages/register.html";
     return;
   }
 

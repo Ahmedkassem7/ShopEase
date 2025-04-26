@@ -687,3 +687,38 @@
           border-color: transparent;
       }
   }
+
+
+
+
+
+
+
+
+
+  /* CheckOuttttttttt */
+  /* CheckOuttttttttt */
+  /* CheckOuttttttttt */
+
+  product-img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+  }
+
+  .checkout-summary {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+  }
+
+  .payment-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+  }
+
+  .payment-icons img {
+      width: 30px;
+  }

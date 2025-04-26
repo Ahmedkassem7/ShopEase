@@ -36,8 +36,9 @@
         </ul>
         <div class="d-flex align-items-center nav-icons mt-2 mt-lg-0">
           <i class="bi bi-search"></i>
-          <a href="./register.html " class="text-reset"><i class="bi bi-person"></i></a>
+          <a href="./register.html " class="text-reset" id="Account"><i class="bi bi-person"></i></a>
           <a href="./cart.html" class="text-reset"><i class="bi bi-bag"></i></a>
+          <i class="bi bi-box-arrow-right text-reset " id="logout"></i>
         </div>
       </div>
     </nav>
@@ -101,9 +102,9 @@
     <h1 class=" animated-text text-center">Today For You!</h1>
     <div class="mt-5 row product-containerr">
       <h5 class="text-danger mb-2">Today's</h5>
-      <div class="d-flex align-items-center gap-4 ">
-        <h2 class="text-dark me-5">Flash Sales</h2>
-        <div class="d-flex justify-content-center gap-3" id="countdown-timer">
+      <div class="row d-flex align-items-center gap-4 ">
+        <h2 class="text-dark  col-lg-2">Flash Sales</h2>
+        <div class="d-flex  gap-3 col-lg-7" id="countdown-timer">
           <div class="d-flex align-items-center">
             <div class="timer-box" id="days">03</div>
             <span class="mx-1">:</span>
@@ -120,132 +121,12 @@
             <div class="timer-box text-danger" id="seconds">56</div>
           </div>
         </div>
-
       </div>
-
     </div>
-
-
-    <!-- <div class="card product-card">
-          <div class="product-image-container">
-            <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-              class="card-img-top product-image"
-              alt="Product"
-            />
-            <div class="quick-actions">
-              <button class="btn buy-now">Add to Cart</button>
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Premium Laptop</h5>
-            <div class="price-container">
-              <span class="original-price">$1,299.99</span>
-              <span class="discounted-price">$999.99</span>
-            </div>
-            <div class="product-rating">
-              <span class="stars">★★★★☆</span>
-              <span class="rating-count">(128)</span>
-            </div>
-          </div>
-        </div> -->
-    <!-- <div class="card product-card">
-          <div class="product-image-container">
-            <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-              class="card-img-top product-image"
-              alt="Product"
-            />
-            <div class="quick-actions">
-              <button class="btn buy-now">Add to Cart</button>
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Premium Laptop</h5>
-            <div class="price-container">
-              <span class="original-price">$1,299.99</span>
-              <span class="discounted-price">$999.99</span>
-            </div>
-            <div class="product-rating">
-              <span class="stars">★★★★☆</span>
-              <span class="rating-count">(128)</span>
-            </div>
-          </div>
-        </div>
-        <div class="card product-card">
-          <div class="product-image-container">
-            <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-              class="card-img-top product-image"
-              alt="Product"
-            />
-            <div class="quick-actions">
-              <button class="btn buy-now">Add to Cart</button>
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Premium Laptop</h5>
-            <div class="price-container">
-              <span class="original-price">$1,299.99</span>
-              <span class="discounted-price">$999.99</span>
-            </div>
-            <div class="product-rating">
-              <span class="stars">★★★★☆</span>
-              <span class="rating-count">(128)</span>
-            </div>
-          </div>
-        </div>
-        <div class="card product-card">
-          <div class="product-image-container">
-            <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-              class="card-img-top product-image"
-              alt="Product"
-            />
-            <div class="quick-actions">
-              <button class="btn buy-now">Add to Cart</button>
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Premium Laptop</h5>
-            <div class="price-container">
-              <span class="original-price">$1,299.99</span>
-              <span class="discounted-price">$999.99</span>
-            </div>
-            <div class="product-rating">
-              <span class="stars">★★★★☆</span>
-              <span class="rating-count">(128)</span>
-            </div>
-          </div>
-        </div>
-        <div class="card product-card">
-          <div class="product-image-container">
-            <img
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-              class="card-img-top product-image"
-              alt="Product"
-            />
-            <div class="quick-actions">
-              <button class="btn buy-now">Add to Cart</button>
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Premium Laptop</h5>
-            <div class="price-container">
-              <span class="original-price">$1,299.99</span>
-              <span class="discounted-price">$999.99</span>
-            </div>
-            <div class="product-rating">
-              <span class="stars">★★★★☆</span>
-              <span class="rating-count">(128)</span>
-            </div>
-          </div>
-        </div> -->
-
     <div class="product-container mt-5 row"></div>
-    <div class="row justify-content-center mt-5">
-      <a class="btn btn-outline-dark w-25 " href="./products.html">View All Products <i
-          class="bi bi-arrow-right ms-2"></i></a>
+    <div class="row justify-content-center mt-5 p-0 m-0">
+      <div class="col-lg-2"><a class="btn btn-outline-dark w-100 " href="./products.html">View All Products <i
+            class="bi bi-arrow-right ms-2"></i></a></div>
     </div>
     <!-- <div class="mt-5 row product-container"></div> -->
     <div id="toast" class="toast ">Message sent successfully! We'll get back to you soon.</div>
@@ -386,6 +267,7 @@
       </div>
     </div>
   </footer>
+  <script src="../js/navbar.js"></script>
   <script src="../js/home.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"

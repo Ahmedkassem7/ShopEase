@@ -9,6 +9,7 @@
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
+
     <script>
         const user = localStorage.getItem("user");
         if (!user) {
@@ -55,61 +56,104 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./home.html">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+                <li class="breadcrumb-item active" aria-current="page">CheckOut</li>
             </ol>
         </nav>
-        <!-- -----------<CART TABLE>----------- -->
-        <div class="table-responsive mb-4">
-            <table class="table bg-white">
-                <thead>
-                    <tr>
-                        <th style="width: 50%;">Product</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Subtotal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div>
-        <!-- -----------<ACTIONS>----------- -->
-        <div class="row mb-5">
-            <div class="col-md-6">
-                <a href="./products.html" class="btn btn-outline-secondary px-4">Return To Shop</a>
+
+        <section class="row mt-4 justify-content-between">
+            <div class="col-lg-7">
+                <h2>Billing Details</h2>
+                <form id="contactForm" class="contact-form col-12 col-md-10 col-lg-9 mt-4">
+                    <div class="mb-3">
+                        <label class="form-label text-muted" for="fullName">Full Name*</label>
+                        <input type="text" class="form-control" id="fullName" required
+                            placeholder="Enter your full name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted" for="companyName">Company Name</label>
+                        <input type="text" class="form-control" id="companyName" placeholder="Enter your company name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted" for="streetAddress">Street Address*</label>
+                        <input type="text" class="form-control" id="streetAddress" required
+                            placeholder="Enter your street address">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted" for="apartmentDetails">Apartment, floor, etc.
+                            (optional)</label>
+                        <input type="text" class="form-control" id="apartmentDetails"
+                            placeholder="Apartment, floor, etc.">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted" for="city">Town/City*</label>
+                        <input type="text" class="form-control" id="city" required placeholder="Enter your city">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted" for="phoneNumber">Phone Number*</label>
+                        <input type="text" class="form-control" id="phoneNumber" required
+                            placeholder="Enter your phone number">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted" for="emailAddress">Email Address*</label>
+                        <input type="email" class="form-control" id="emailAddress" required
+                            placeholder="Enter your email address">
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                        <label class="form-check-label" for="checkDefault">
+                            Save this information for faster check-out next time
+                        </label>
+                    </div>
+                </form>
             </div>
+            <div class="col-lg-5 align-items-end mt-5">
 
-        </div>
-
-        <!-- Coupon and Cart Totals -->
-        <div class="row">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <div class="d-flex gap-2">
-                    <input type="text" class="form-control" placeholder="Enter coupon code">
-                    <button class="btn btn-danger px-4">Apply Coupon</button>
+                <div class="mb-3 row justify-content-between">
+                    <p class="col-4">Subtotal:</p>
+                    <p class="col-4 text-end" id="cart-subtotal">123$</p>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card">
-                    <div class="card-body p-4">
-                        <h5 class="card-title mb-4">Cart Summary</h5>
-                        <div class="d-flex justify-content-between mb-3">
-                            <span class="text-muted">Subtotal</span>
-                            <span class="fw-medium" id="cart-subtotal">$1,750</span>
-                        </div>
-                        <div class="d-flex justify-content-between mb-3">
-                            <span class="text-muted">Shipping</span>
-                            <span class="text-success fw-medium">Free</span>
-                        </div>
-                        <hr class="my-4">
-                        <div class="d-flex justify-content-between mb-4">
-                            <span class="h6 mb-0">Total</span>
-                            <span class="h5 mb-0 text-danger" id="cart-total">$1,750</span>
-                        </div>
-                        <a class="btn btn-danger w-100 py-3 fw-medium" href="./checkOut.html">Proceed to Checkout</a>
+                <hr>
+                <div class="mb-3 row justify-content-between">
+                    <p class="col-4">Shipping:</p>
+                    <p class="col-4 text-end text-success">free</p>
+                </div>
+                <hr>
+                <div class="mb-3 row justify-content-between">
+                    <p class="col-4">Total:</p>
+                    <h5 class="col-4 text-end text-success" id="cart-total">2613$</h5>
+                </div>
+                <div class="form-check justify-content-between d-flex">
+                    <div>
+                        <input class="form-check-input" type="radio" name="radioDefault" id="Bank">
+                        <label class="form-check-label" for="Bank">
+                            Bank
+                        </label>
+                    </div>
+                    <div class="payment-icons ms-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
+                            alt="Mastercard">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
                     </div>
                 </div>
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="radioDefault" id="cashOnDelivery" checked>
+                    <label class="form-check-label" for="cashOnDelivery">
+                        Cash on delivery
+                    </label>
+                </div>
+
+                <br>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Coupon Code" id="couponCode">
+                    <button class="btn btn-danger" id="applyCoupon">Apply Coupon</button>
+                </div>
+
+                <button class="btn btn-danger w-100" id="placeOrder">Place Order</button>
             </div>
-        </div>
+
+
+        </section>
     </div>
 
 
@@ -205,8 +249,7 @@
 
     <div class="container newsletter-container"></div>
     <script src="../js/navbar.js"></script>
-    <script src="../js/cart.js"></script>
-    <script src="../js/home.js"></script>
+    <script src="../js/checkOut.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>

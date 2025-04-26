@@ -66,7 +66,7 @@
           "productId": "6408de536406cd15828e8f10",
           "name": "WH-CH510 Wireless On-Ear Bluetooth Headphones Black",
           "price": 1949,
-          "quantity": 2,
+          "quantity": 3,
           "image": "https://ecommerce.routemisr.com/Route-Academy-products/1678302803182-2.jpeg"
         },
         {
@@ -150,15 +150,22 @@
           "productId": "6428e5e6dc1175abc65ca084",
           "name": "Woman Standart Fit Knitted Cardigan",
           "price": 499,
-          "quantity": 2,
+          "quantity": 3,
           "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680401893496-2.jpeg"
         },
         {
           "productId": "6428e778dc1175abc65ca08a",
           "name": "Woman Brown Long Sleeve Tunic LT.CAMEL",
           "price": 499,
-          "quantity": 2,
+          "quantity": 3,
           "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680402296306-3.jpeg"
+        },
+        {
+          "productId": "6428bf40dc1175abc65c9ff1",
+          "name": "Polo Collar Short Sleeve Color Block Men's Knitwear Sweater",
+          "price": 349,
+          "quantity": 2,
+          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680391999434-1.jpeg"
         }
       ]
     },
@@ -172,14 +179,14 @@
           "productId": "6428eb43dc1175abc65ca0b3",
           "name": "Woman Shawl",
           "price": 149,
-          "quantity": 6,
+          "quantity": 7,
           "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
         },
         {
           "productId": "6428cb19dc1175abc65ca031",
           "name": "Salah Track Top",
           "price": 1749,
-          "quantity": 3,
+          "quantity": 7,
           "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680395033000-2.jpeg"
         },
         {
@@ -207,7 +214,7 @@
           "productId": "6428c0fedc1175abc65c9ffd",
           "name": "Crew Neck Long Sleeve Striped Men's Tricot Sweater",
           "price": 599,
-          "quantity": 6,
+          "quantity": 7,
           "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392445792-2.jpeg"
         },
         {
@@ -242,8 +249,22 @@
           "productId": "6408e98e6406cd15828e8f30",
           "name": "Archer VR300 AC1200 Wireless VDSL/ADSL Modem Router Black",
           "price": 1699,
-          "quantity": 1,
+          "quantity": 3,
           "image": "https://ecommerce.routemisr.com/Route-Academy-products/1678305677267-3.jpeg"
+        },
+        {
+          "productId": "6428e884dc1175abc65ca096",
+          "name": "Woman Shawl",
+          "price": 349,
+          "quantity": 1,
+          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680402563676-2.jpeg"
+        },
+        {
+          "productId": "6428dfa0dc1175abc65ca067",
+          "name": "Logo T-Shirt Green",
+          "price": 744,
+          "quantity": 3,
+          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680400287765-1.jpeg"
         }
       ]
     },
@@ -295,6 +316,28 @@
       "email": "sdcdc@gmail.com",
       "password": "Ahmed123",
       "cart": []
+    },
+    {
+      "id": "8986",
+      "username": "Sara",
+      "email": "Sara123@gmail.com",
+      "password": "Ahmed123",
+      "cart": [
+        {
+          "productId": "6428eb43dc1175abc65ca0b3",
+          "name": "Woman Shawl",
+          "price": 149,
+          "quantity": 1,
+          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
+        },
+        {
+          "productId": "6428ebc6dc1175abc65ca0b9",
+          "name": "Woman Shawl",
+          "price": 191,
+          "quantity": 2,
+          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403397482-1.jpeg"
+        }
+      ]
     }
   ]
 }
