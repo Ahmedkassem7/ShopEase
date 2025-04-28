@@ -42,12 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderCategoryFilters() {
     categories.forEach((category) => {
       const div = document.createElement("div");
-      div.className = "mt-2";
+      div.className = "mt-2  ";
       div.innerHTML = `
-      <input class="form-check-input" type="checkbox" value="${category}" id="category-${category}" />
-      
+       <input class="form-check-input" type="checkbox" value="${category}" id="category-${category}">
       <label class="form-check-label" for="category-${category}">
-      ${category}
+        ${category}
       </label> `;
       categoryFilters.appendChild(div);
     });
@@ -168,10 +167,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Search input event
   searchInput.addEventListener("input", renderProducts);
 
-  // Price range event
-  priceRange.addEventListener("input", () => {
-    maxPrice = parseInt(priceRange.value, 10);
-    priceValue.textContent = `0 - ${maxPrice}`;
+  priceRange.addEventListener("input", (e) => {
+    maxPrice = e.target.value;
+    priceValue.textContent = `$0 - $${maxPrice}`;
     renderProducts();
   });
 });
@@ -228,4 +226,20 @@ document.addEventListener("click", async (e) => {
       });
     });
   }
+});
+
+anime({
+  targets: "h2 span",
+  translateY: [
+    { value: "-2.75rem", easing: "easeOutExpo", duration: 600 },
+    { value: 0, easing: "easeOutBounce", duration: 800, delay: 100 },
+  ],
+  rotate: {
+    value: "-1turn",
+    delay: 0,
+  },
+  delay: (el, i) => i * 50, // each letter starts a bit later
+  easing: "easeInOutCirc",
+  loop: true,
+  loopDelay: 1000,
 });

@@ -62,8 +62,19 @@
     </div>
     <!-- -----------<HEADER>----------- -->
     <header class="bg-white shadow-sm py-4">
-        <div class="container text-center">
-            <h1 class="display-4 text-danger">ShopEase</h1>
+        <div class="container text-center animat">
+            <!-- <h1 class="display-4 text-danger">ShopEase</h1> -->
+            <h2 class="large grid centered square-grid text-xl display-4 text-danger">
+                <span>S</span>
+                <span>H</span>
+                <span>O</span>
+                <span>P</span>
+                <!-- <span>&nbsp;</span> -->
+                <span>E</span>
+                <span>A</span>
+                <span>S</span>
+                <span>E</span>
+            </h2>
             <p class="text-muted">Discover amazing products at great prices</p>
         </div>
     </header>
@@ -77,18 +88,65 @@
         </div>
         <div class="row">
             <div class="col-md-3 mb-4">
-                <div class="col-md-8 mb-3">
+                <!-- <div class="col-md-8 mb-3">
                     <label for="priceRange" class="form-label">Price Range: <span id="priceValue">0 -
                             2000</span></label>
                     <input type="range" class="form-range" min="0" max="2000" step="10" id="priceRange">
                 </div>
                 <h5>Categories</h5>
                 <div id="categoryFilters" class="form-check mt-3 ">
-                    <!-- Category checkboxes will be injected here -->
                 </div>
                 <h5 class="mt-5">Brands</h5>
                 <div id="brandsFilters" class="form-check mt-3 ">
-                    <!-- Category checkboxes will be injected here -->
+                </div> -->
+
+                <div
+                    class="d-flex justify-content-between align-items-center d-lg-none bg-white p-3 rounded shadow-sm mobile-filter-toggle">
+                    <h3 class="h5 mb-0">Filters</h3>
+                    <button id="toggleFilters" class="btn btn-outline-secondary btn-sm d-flex align-items-center">
+                        <i class="bi bi-sliders"></i>&nbsp; Filter
+                    </button>
+                </div>
+
+                <!-- Filter Panel -->
+                <div id="filterPanel" class="bg-white p-4 rounded shadow-sm filter-panel d-none d-lg-block">
+
+                    <!-- Price Range -->
+                    <div class="mb-5">
+                        <div class=" d-flex justify-content-between align-items-center mb-3">
+                            <!-- <div class="col-lg-8 d-flex align-items-center"> -->
+                            <!-- <i class="bi bi-filter fs-5 me-3"></i> -->
+                            <h5 class="mb-0 h5"><i class="bi bi-filter fs-5 me-3"></i>Price Range</h5>
+                            <!-- </div> -->
+                            <span id="priceValue" class="text-muted small col-4">$0 - $2000</span>
+                        </div>
+                        <input type="range" class="form-range" min="0" max="2000" step="10" id="priceRange"
+                            value="2000">
+                        <div class="d-flex justify-content-between text-muted small mt-2">
+                            <span>$0</span>
+                            <span>$2000</span>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="mb-5">
+
+
+                        <h5 class="mb-3"><i class="bi bi-tags me-2"></i>Categories</h5>
+
+                        <div id="categoryFilters" class="form-check">
+                            <!-- Categories will be injected here -->
+                        </div>
+                    </div>
+
+                    <!-- Brands -->
+                    <div>
+                        <h5 class="mb-3"><i class="bi bi-filter fs-5 me-3"></i>Brands</h5>
+                        <div id="brandsFilters" class="form-check">
+                            <!-- Brands will be injected here -->
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="col-md-9">
@@ -199,6 +257,7 @@
         </div>
     </footer>
     <!-- -----------<END PAGE PRODUCT>----------- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="../js/navbar.js"></script>
     <script src="../js/products.js"></script>
     <script src="../js/home.js"></script>

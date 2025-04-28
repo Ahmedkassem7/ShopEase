@@ -1,3 +1,10 @@
+  .header-container {
+      position: relative;
+      z-index: 1000;
+      color: #ffffff;
+      font-size: large;
+  }
+
   .navbar-brand {
       font-weight: bold;
       font-size: 1.5rem;
@@ -48,133 +55,6 @@
       }
   }
 
-  /* //////////////////////////////////////////////// */
-  /* slider------------ */
-  .carousel {
-      position: relative;
-      width: 100%;
-      height: 90vh;
-      overflow: hidden;
-  }
-
-  .slide {
-      position: absolute;
-      top: 0;
-      left: 100%;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: all 0.8s ease-in-out;
-      background-size: cover;
-      background-position: center;
-  }
-
-  .slide.active {
-      left: 0;
-      opacity: 1;
-      z-index: 1;
-  }
-
-  .carousel-caption {
-      position: absolute;
-      bottom: 20%;
-      left: 5%;
-      color: white;
-      max-width: 500px;
-  }
-
-  .carousel-caption h1 {
-      font-size: 3rem;
-      font-weight: bold;
-  }
-
-  .carousel-caption p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-  }
-
-  .carousel-controls {
-      position: absolute;
-      bottom: 15px;
-      left: 50%;
-      /* transform: translateX(-50%); */
-      display: flex;
-      gap: 10px;
-  }
-
-  .dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.5);
-      cursor: pointer;
-      z-index: 999999999;
-  }
-
-  .dot.active {
-      background: white;
-      z-index: 999999999;
-  }
-
-  .counter {
-      position: absolute;
-      bottom: 20px;
-      right: 60px;
-      font-size: 15px;
-      color: #ffffff;
-      font-weight: bold;
-      z-index: 999999999;
-  }
-
-  /* //////////////////////////////////////////////// */
-  /* //////////////////////////////////////////////// */
-
-  /* slider Home Page */
-  .slider-container {
-      position: relative;
-      width: 100%;
-      /* height: 30rem; */
-      margin: auto;
-      overflow: hidden;
-  }
-
-  .slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-  }
-
-  .slide {
-      min-width: 100%;
-  }
-
-  .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-
-  .prev,
-  .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(160, 55, 55, 0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-  }
-
-  .prev {
-      left: 20px;
-  }
-
-  .next {
-      right: 10px;
-  }
-
-
-
   /* Register Page  */
   .reg_img {
       width: 100%;
@@ -205,144 +85,12 @@
       cursor: pointer;
   }
 
-
-  /* Product Card  */
-  /* 
-  .product-card {
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      background: white;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-  }
-
-  .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .product-image-container {
-      position: relative;
-      padding-top: 5%;
-      /* 4:3 aspect ratio */
-  /* overflow: hidden; */
-  /* background: #f5f5f5; */
-  /* } */
-
-  /* .product-image-container img {
-      width: 100%;
-      width: 150px;
-      height: ;
-      height: auto;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px 10px 0 0;
-  } */
-
-  /* .product-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-  }
-
-  .product-card:hover .product-image {
-      transform: scale(1.05);
-  }
-
-  .product-info {
-      padding: 15px;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-  }
-
-  .product-title {
-      font-size: 1rem;
-      font-weight: 600;
-      margin: 0 0 5px 0;
-      color: #333;
-  }
-
-  .product-brand {
-      font-size: 0.8rem;
-      color: #777;
-      margin: 0 0 10px 0;
-  }
-
-  .product-description {
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 10px;
-      flex-grow: 1;
-  }
-
-  .product-price {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #333;
-  }
-
-  .product-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 10px;
-  }
-
-  .stock-status {
-      font-size: 0.8rem;
-      padding: 3px 8px;
-      border-radius: 4px;
-  }
-
-  .in-stock {
-      background-color: #e8f5e9;
-      color: #2e7d32;
-  }
-
-  .out-of-stock {
-      background-color: #ffebee;
-      color: #c62828;
-  }
-
-  .add-to-cart-button {
-      background-color: #333;
-      color: white;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 5px;
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: background-color 0.2s;
-  }
-
-  .add-to-cart-button:hover {
-      background-color: #555;
-  }
-
-  .add-to-cart-button:disabled {
-      background-color: #ccc;
-      cursor: not-allowed;
-  } */
-
-  /* */
-  /* */
-  /* Home News Letter */
   /* Home News Letter */
   .newsletter-section {
       background-color: #f8f9fa;
       padding: 3rem 0;
       text-align: center;
   }
-
-
 
   .newsletter-container {
       max-width: 1000px;
@@ -375,23 +123,6 @@
       color: #aeb6ab;
   }
 
-  /* Home News Letter */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* svsvvs */
-  /* svsvvs */
   .card.product-card {
       max-width: 300px;
       margin: 1rem auto;
@@ -688,18 +419,7 @@
       }
   }
 
-
-
-
-
-
-
-
-
   /* CheckOuttttttttt */
-  /* CheckOuttttttttt */
-  /* CheckOuttttttttt */
-
   product-img {
       width: 50px;
       height: 50px;

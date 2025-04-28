@@ -9,12 +9,13 @@
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/slider.css" />
 </head>
 
 <body>
   <!-- -----------<HEADER>----------- -->
-  <div class="container">
-    <nav class="bg-white border-bottom px-3 py-3 d-flex">
+  <div class="container header-container" style="z-index: 1000px;">
+    <nav class=" border-bottom px-3 py-3 d-flex ">
       <div class="">
         <a class="navbar-brand" href="#">ShopEase</a>
         <button class="navbar-toggler ms-auto" id="toggleBtn">☰</button>
@@ -52,46 +53,142 @@
       </div>
     </nav>
   </div>
-  <!-- -----------<CAROUSEL>----------- -->
-  <div class="carousel" id="customCarousel">
-    <!-- Slides -->
-    <div class="slide active" style="background-image: url('../assets/images/slid3.jpeg')">
-      <div class="carousel-caption text-start">
-        <h1>Upgrade Your Style</h1>
-        <p>
-          Discover the latest trends in fashion and refresh your wardrobe today.
-        </p>
-        <a href="#" class="btn btn-light btn-lg rounded-pill px-4">Shop Fashion</a>
+
+
+  <!-- -----------<carousel>----------- -->
+  <section style="margin-top: -75px;">
+    <div class="carousel">
+      <!-- list item -->
+      <div class="list">
+        <div class="item">
+          <img src="../assets/images/menFa.jpg">
+          <div class="content">
+            <div class="author">SHOPMART</div>
+            <div class="title">MEN'S STYLE</div>
+            <div class="topic">FASHION MEN</div>
+            <div class="des">
+              Upgrade your wardrobe with the latest in men’s fashion. Discover trending outfits, accessories, and more
+              at
+              unbeatable prices. Shop the look today!
+            </div>
+            <div class="buttons">
+              <button>SHOP MEN</button>
+              <button>VIEW STYLES</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="../assets/images/athena.jpg">
+          <div class="content">
+            <div class="author">SHOPMART</div>
+            <div class="title">TRENDY LOOKS</div>
+            <div class="topic">FASHION GIRLS</div>
+            <div class="des">
+              Find the latest girls’ fashion for every season! From casual wear to party dresses, discover stylish
+              pieces
+              made for every occasion.
+            </div>
+            <div class="buttons">
+              <button>SHOP GIRLS</button>
+              <button>EXPLORE LOOKS</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="../assets/images/eleece.jpg">
+          <div class="content">
+            <div class="author">SHOPMART</div>
+            <div class="title">TECH DEALS</div>
+            <div class="topic">ELECTRONICS</div>
+            <div class="des">
+              Stay ahead with cutting-edge technology. Discover deals on smartphones, laptops, and accessories. Limited
+              stock available — grab yours now!
+            </div>
+            <div class="buttons">
+              <button>SHOP TECH</button>
+              <button>SEE DEALS</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="../assets/images/nhan.jpg">
+          <div class="content">
+            <div class="author">SHOPMART</div>
+            <div class="title">STEP UP</div>
+            <div class="topic">SHOES</div>
+            <div class="des">
+              Walk the talk with our latest shoe collection! Sneakers, boots, heels, and more — stylish options for
+              every
+              step you take.
+            </div>
+            <div class="buttons">
+              <button>SHOP SHOES</button>
+              <button>DISCOVER MORE</button>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- list thumbnail -->
+      <div class="thumbnail">
+        <div class="item">
+          <img src="../assets/images/menFa.jpg">
+          <div class="content">
+            <div class="title">
+              Fashion Men
+            </div>
+            <div class="description">
+              Men's Style
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="../assets/images/athena.jpg">
+          <div class="content">
+            <div class="title">
+              Fashion Girls
+            </div>
+            <div class="description">
+              Trendy Looks
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="../assets/images/eleece.jpg">
+          <div class="content">
+            <div class="title">
+              Electronics
+            </div>
+            <div class="description">
+              Tech Deals
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="../assets/images/nhan.jpg">
+          <div class="content">
+            <div class="title">
+              Shoes
+            </div>
+            <div class="description">
+              Step Up
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- next prev -->
+      <div class="arrows">
+        <button id="prev"> &lt; </button>
+        <button id="next">></button>
+      </div>
+
+      <!-- time running -->
+      <div class="time"></div>
     </div>
 
-    <div class="slide" style="background-image: url('../assets/images/slid2.jpeg')">
-      <div class="carousel-caption text-start">
-        <h1>Shop Home</h1>
-        <p>
-          Get unbeatable prices on smartphones, laptops, and accessories — limited time only!
+  </section>
 
-        </p>
-        <a href="#" class="btn btn-light btn-lg rounded-pill px-4">Browse Tech</a>
-      </div>
-    </div>
-
-    <div class="slide" style="background-image: url('../assets/images/side1.jpeg')">
-      <div class="carousel-caption text-start">
-        <h1>Home Essentials Sale</h1>
-        <p>
-          From kitchen tools to cozy bedding — find everything you need for your home at amazing prices.
-        </p>
-        <a href="#" class="btn btn-light btn-lg rounded-pill px-4">Shop Home</a>
-      </div>
-    </div>
-
-    <!-- Dots -->
-    <div class="carousel-controls" id="carouselDots"></div>
-
-    <!-- Slide counter -->
-    <div class="counter" id="slideCounter">01/03</div>
-  </div>
   <!-- -----------<CATEGORIES>----------- -->
   <div class="container my-5">
     <p class="section-label">Categories</p>
@@ -132,7 +229,7 @@
         </div>
       </div>
     </div>
-    <div class="product-container mt-5 row"></div>
+    <div class="product-container mt-5 row p-0 m-0"></div>
     <div class="row justify-content-center mt-5 p-0 m-0">
       <div class="col-lg-2"><a class="btn btn-outline-dark w-100 " href="./products.html">View All Products <i
             class="bi bi-arrow-right ms-2"></i></a></div>
@@ -276,6 +373,7 @@
       </div>
     </div>
   </footer>
+
   <script src="../js/navbar.js"></script>
   <script src="../js/home.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
