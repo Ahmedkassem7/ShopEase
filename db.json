@@ -179,7 +179,7 @@
           "productId": "6428eb43dc1175abc65ca0b3",
           "name": "Woman Shawl",
           "price": 149,
-          "quantity": 9,
+          "quantity": 10,
           "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
         },
         {
@@ -272,6 +272,20 @@
           "price": 1999,
           "quantity": 5,
           "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680394593459-1.jpeg"
+        },
+        {
+          "productId": "6428ebc6dc1175abc65ca0b9",
+          "name": "Woman Shawl",
+          "price": 191,
+          "quantity": 4,
+          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403397482-1.jpeg"
+        },
+        {
+          "productId": "6428ead5dc1175abc65ca0ad",
+          "name": "Woman Shawl",
+          "price": 149,
+          "quantity": 1,
+          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403156555-3.jpeg"
         }
       ]
     },

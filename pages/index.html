@@ -10,11 +10,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/slider.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
 </head>
 
 <body>
   <!-- -----------<HEADER>----------- -->
-  <div class="container header-container" style="z-index: 1000px;">
+  <!-- <div class="container header-container" style="z-index: 1000px;">
     <nav class=" border-bottom px-3 py-3 d-flex ">
       <div class="">
         <a class="navbar-brand" href="#">ShopEase</a>
@@ -52,16 +53,49 @@
         </div>
       </div>
     </nav>
+  </div> -->
+
+  <div class="container header-container header-container3 text-">
+    <nav class="border-bottom px-3 py-3 d-flex">
+      <div class="d-flex justify-content-between align-items-center w-100 largeScreen">
+        <a class="navbar-brand" href="#">ShopEase</a>
+        <button class="navbar-toggler ms-auto" id="toggleBtn" aria-label="Toggle navigation">
+          ☰
+        </button>
+      </div>
+      <div class="navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav nav-links d-flex flex-column flex-lg-row mx-lg-auto text-center text-lg-start">
+          <li class="nav-item text-light"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./products.html">Products</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center nav-icons mt-3 mt-lg-0">
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person"></i>
+            </button>
+            <ul class="dropdown-menu text-center">
+              <li>Ahmed Kassem</li>
+            </ul>
+          </div>
+          <a href="./register.html" class="text-reset" id="Account"><i class="bi bi-person"></i></a>
+          <a href="./cart.html" class="text-reset"><i class="bi bi-bag"></i></a>
+          <i class="bi bi-box-arrow-right text-reset" id="logout"></i>
+        </div>
+      </div>
+    </nav>
   </div>
 
-
   <!-- -----------<carousel>----------- -->
-  <section style="margin-top: -75px;">
+  <section style="margin-top: -77px;">
+    <!-- <section> -->
     <div class="carousel">
       <!-- list item -->
       <div class="list">
         <div class="item">
-          <img src="../assets/images/menFa.jpg">
+          <img src="../assets/images/menFa.jpg" alt="MEN'S STYLE">
           <div class="content">
             <div class="author">SHOPMART</div>
             <div class="title">MEN'S STYLE</div>
@@ -78,7 +112,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="../assets/images/athena.jpg">
+          <img src="../assets/images/athena.jpg" alt="FASHION">
           <div class="content">
             <div class="author">SHOPMART</div>
             <div class="title">TRENDY LOOKS</div>
@@ -95,7 +129,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="../assets/images/eleece.jpg">
+          <img src="../assets/images/eleece.jpg" alt="TECH DEALS">
           <div class="content">
             <div class="author">SHOPMART</div>
             <div class="title">TECH DEALS</div>
@@ -111,7 +145,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="../assets/images/nhan.jpg">
+          <img src="../assets/images/nhan.jpg" alt="SHOES">
           <div class="content">
             <div class="author">SHOPMART</div>
             <div class="title">STEP UP</div>
@@ -132,7 +166,7 @@
       <!-- list thumbnail -->
       <div class="thumbnail">
         <div class="item">
-          <img src="../assets/images/menFa.jpg">
+          <img src="../assets/images/menFa.jpg" alt="men">
           <div class="content">
             <div class="title">
               Fashion Men
@@ -143,7 +177,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="../assets/images/athena.jpg">
+          <img src="../assets/images/athena.jpg" class="girl">
           <div class="content">
             <div class="title">
               Fashion Girls
@@ -154,7 +188,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="../assets/images/eleece.jpg">
+          <img src="../assets/images/eleece.jpg" class="tech">
           <div class="content">
             <div class="title">
               Electronics
@@ -165,7 +199,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="../assets/images/nhan.jpg">
+          <img src="../assets/images/nhan.jpg" class="shoes">
           <div class="content">
             <div class="title">
               Shoes
@@ -375,7 +409,7 @@
   </footer>
 
   <script src="../js/navbar.js"></script>
-  <script src="../js/home.js"></script>
+  <script type="module" src="../js/home.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
     crossorigin="anonymous"></script>

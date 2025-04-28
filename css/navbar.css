@@ -1,0 +1,175 @@
+/* Base Navbar */
+.header-container {
+    position: relative;
+    z-index: 1000;
+    color: #000000;
+    font-size: 1rem;
+}
+
+/* Branding */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.75rem;
+    color: #333;
+}
+
+/* Nav Links */
+.nav-links {
+    gap: 1.5rem;
+}
+
+/* Nav Icons */
+.nav-icons i {
+    font-size: 1.3rem;
+    /* margin-left: 1.2rem; */
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav-icons i:hover {
+    color: #007bff;
+}
+
+/* Toggler */
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/* Collapse */
+.navbar-collapse {
+    max-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-basis: 100%;
+    flex-grow: 1;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.navbar-collapse.show {
+    max-height: 500px;
+    padding: 1rem;
+}
+
+/* Nav Items */
+.nav-item {
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+.nav-link {
+    padding: 0.5rem 0;
+    display: block;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #f1683a;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    min-width: 160px;
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+}
+
+/* Mobile */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #fff;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 0 1rem;
+        z-index: 999;
+    }
+
+    .nav-icons {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 1rem;
+        border-top: 1px solid #eee;
+        padding-top: 1rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .largeScreen {
+        width: 0 !important;
+    }
+
+    .navbar-collapse {
+        max-height: none;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        overflow: visible;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .nav-links {
+        flex-direction: row;
+    }
+
+    .nav-item {
+        padding: 0;
+        width: auto;
+    }
+
+    .nav-icons {
+        margin-top: 0;
+        border-top: none;
+        padding-top: 0;
+    }
+}
+
+/* Dark Mode */
+/* @media (prefers-color-scheme: dark) {
+    .header-container {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    .navbar-brand,
+    .nav-link,
+    .navbar-toggler,
+    .nav-icons i {
+        color: #000000;
+    }
+
+    .nav-link:hover,
+    .nav-icons i:hover {
+        color: #0d6efd;
+    }
+
+    .navbar-collapse {
+        background-color: #ffffff;
+    }
+
+    .dropdown-menu {
+        background-color: #ffffff;
+        border-color: #555;
+    }
+} */

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/productPage.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
     <!-- <script>
         const user = localStorage.getItem("user");
         if (!user) {
@@ -20,47 +21,41 @@
 
 <body>
     <!-- -----------<NAVBAR>----------- -->
-    <div class="container">
-        <nav class="bg-white border-bottom px-3 py-3 d-flex">
-            <div class="">
+
+    <!-- -----------<HEADER>----------- -->
+    <div class="container header-container">
+        <nav class="border-bottom px-3 py-3 d-flex">
+            <div class="d-flex justify-content-between align-items-center w-100 largeScreen">
                 <a class="navbar-brand" href="#">ShopEase</a>
-                <button class="navbar-toggler ms-auto" id="toggleBtn">☰</button>
+                <button class="navbar-toggler ms-auto" id="toggleBtn" aria-label="Toggle navigation">
+                    ☰
+                </button>
             </div>
             <div class="navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav nav-links d-flex flex-column flex-lg-row mx-lg-auto text-center text-lg-start">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./products.html">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contact.html">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
                 </ul>
-                <div class="d-flex align-items-center nav-icons mt-2 mt-lg-0">
+                <div class="d-flex align-items-center nav-icons mt-3 mt-lg-0">
                     <div class="dropdown">
-                        <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="bi bi-person"></i>
                         </button>
-                        <ul class="dropdown-menu ">
-                            <li class="text-center">Ahmed Kassem</li>
-
-
+                        <ul class="dropdown-menu text-center">
+                            <li>Ahmed Kassem</li>
                         </ul>
                     </div>
-                    <a href="./register.html " class="text-reset" id="Account"><i class="bi bi-person"></i></a>
+                    <a href="./login.html" class="text-reset" id="Account"><i class="bi bi-person"></i></a>
                     <a href="./cart.html" class="text-reset"><i class="bi bi-bag"></i></a>
-                    <i class="bi bi-box-arrow-right text-reset " id="logout"></i>
+                    <i class="bi bi-box-arrow-right text-reset" id="logout"></i>
                 </div>
             </div>
         </nav>
     </div>
-    <!-- -----------<HEADER>----------- -->
+    <!-- -----------<END NAVBAR>----------- -->
     <header class="bg-white shadow-sm py-4">
         <div class="container text-center animat">
             <!-- <h1 class="display-4 text-danger">ShopEase</h1> -->
@@ -166,9 +161,6 @@
             </div>
         </div>
     </main>
-
-    <div id="toast" class="toast">Product added to cart successfully!</div>
-
     <!-- -----------<SCROLL Button>----------- -->
     <div class="scroll-top-btn" onclick="scrollToTop()">
         <i class="bi bi-arrow-up"></i>
@@ -259,8 +251,8 @@
     <!-- -----------<END PAGE PRODUCT>----------- -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="../js/navbar.js"></script>
-    <script src="../js/products.js"></script>
-    <script src="../js/home.js"></script>
+    <script type="module" src="../js/products.js"></script>
+    <script type="module" src="../js/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>

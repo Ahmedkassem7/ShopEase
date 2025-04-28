@@ -1,3 +1,5 @@
+import { showCustomAlert } from "./alerts.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const productsContainer = document.getElementById("productsContainer");
   const searchInput = document.getElementById("searchInput");
@@ -174,8 +176,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 document.addEventListener("click", async (e) => {
-  const toast = document.getElementById("toast");
-
   if (e.target.classList.contains("buy-now")) {
     const productId = e.target.dataset.id;
     // console.log("productId", productId);
@@ -191,7 +191,13 @@ document.addEventListener("click", async (e) => {
     // console.log("productData", productData);
     const currentUser = JSON.parse(localStorage.getItem("user"));
     if (!currentUser) {
-      alert("You must login first.");
+      showCustomAlert(
+        "warning",
+        "Warning!",
+        "You must login first.",
+        3000,
+        "top-right"
+      );
       return;
     }
     const userId = currentUser.id;
@@ -212,10 +218,14 @@ document.addEventListener("click", async (e) => {
     } else {
       updatedCart.push(product);
     }
-    toast.classList.add("show");
-    setTimeout(() => {
-      toast.classList.remove("show");
-    }, 1000);
+
+    showCustomAlert(
+      "success",
+      "Success!",
+      "Product added to cart successfully!",
+      3000,
+      "top-right"
+    );
     setTimeout(async () => {
       await fetch(`http://localhost:3000/users/${userId}`, {
         method: "PATCH",
@@ -225,6 +235,24 @@ document.addEventListener("click", async (e) => {
         body: JSON.stringify({ cart: updatedCart }),
       });
     });
+  }
+});
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("view-product")) {
+    const productId = e.target.dataset.id;
+
+    const currentUser = JSON.parse(localStorage.getItem("user"));
+    if (!currentUser) {
+      showCustomAlert(
+        "warning",
+        "Warning!",
+        "You must login first.",
+        3000,
+        "top-right"
+      );
+      return;
+    }
+    window.location.href = `/pages/productPage.html?id=${productId}`;
   }
 });
 
@@ -243,3 +271,8 @@ anime({
   loop: true,
   loopDelay: 1000,
 });
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+window.scrollToTop = scrollToTop; // Expose the function to the global scope

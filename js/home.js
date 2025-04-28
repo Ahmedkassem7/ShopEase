@@ -1,3 +1,4 @@
+import { showCustomAlert } from "./alerts.js";
 function checkUser() {
   const user = localStorage.getItem("user");
   // if (!user) {
@@ -151,7 +152,13 @@ document.addEventListener("click", async (e) => {
 
       const currentUser = JSON.parse(localStorage.getItem("user"));
       if (!currentUser) {
-        alert("You must login first.");
+        showCustomAlert(
+          "warning",
+          "Warning!",
+          "You must login first.",
+          3000,
+          "top-right"
+        );
         return;
       }
 
@@ -239,7 +246,13 @@ document.addEventListener("click", (e) => {
 
     const currentUser = JSON.parse(localStorage.getItem("user"));
     if (!currentUser) {
-      alert("You must login first.");
+      showCustomAlert(
+        "warning",
+        "Warning!",
+        "You must login first.",
+        3000,
+        "top-right"
+      );
       return;
     }
     window.location.href = `/pages/productPage.html?id=${productId}`;
@@ -270,13 +283,14 @@ setInterval(updateClock, 1000);
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
-
+window.scrollToTop = scrollToTop; // Expose the function to the global scope
 const categoryScrollContainer = document.getElementById("category-scroll");
 
 function scrollLeftFunc() {
   categoryScrollContainer.scrollBy({ left: -300, behavior: "smooth" });
 }
-
+window.scrollLeftFunc = scrollLeftFunc; // Expose the function to the global scope
 function scrollRightFunc() {
   categoryScrollContainer.scrollBy({ left: 300, behavior: "smooth" });
 }
+window.scrollRightFunc = scrollRightFunc; // Expose the function to the global scope
