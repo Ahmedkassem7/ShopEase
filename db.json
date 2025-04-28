@@ -179,7 +179,7 @@
           "productId": "6428eb43dc1175abc65ca0b3",
           "name": "Woman Shawl",
           "price": 149,
-          "quantity": 7,
+          "quantity": 8,
           "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
         },
         {
@@ -193,7 +193,7 @@
           "productId": "6428c320dc1175abc65ca008",
           "name": "Crew Neck Long Sleeve Men's Knitwear Sweater",
           "price": 449,
-          "quantity": 6,
+          "quantity": 9,
           "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392991339-2.jpeg"
         },
         {
@@ -265,6 +265,13 @@
           "price": 744,
           "quantity": 3,
           "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680400287765-1.jpeg"
+        },
+        {
+          "productId": "6428c962dc1175abc65ca025",
+          "name": "Duramo 10 Running Shoes",
+          "price": 1999,
+          "quantity": 2,
+          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680394593459-1.jpeg"
         }
       ]
     },
@@ -327,17 +334,66 @@
           "productId": "6428eb43dc1175abc65ca0b3",
           "name": "Woman Shawl",
           "price": 149,
-          "quantity": 1,
+          "quantity": 2,
           "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
         },
         {
           "productId": "6428ebc6dc1175abc65ca0b9",
           "name": "Woman Shawl",
           "price": 191,
-          "quantity": 2,
+          "quantity": 4,
           "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403397482-1.jpeg"
+        },
+        {
+          "productId": "6428c320dc1175abc65ca008",
+          "name": "Crew Neck Long Sleeve Men's Knitwear Sweater",
+          "price": 449,
+          "quantity": 3,
+          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392991339-2.jpeg"
         }
       ]
+    },
+    {
+      "id": "46ed",
+      "username": "alaa",
+      "email": "ali@t.com",
+      "password": "ALIahmed123"
+    },
+    {
+      "id": "9f50",
+      "username": "333",
+      "email": "dxdc@gmail.comcom",
+      "password": "Ahmed123@"
+    },
+    {
+      "id": "c8ff",
+      "username": "AhmedAli",
+      "email": "AhmedAl12@gmail.com",
+      "password": "Ahmed123!"
+    },
+    {
+      "id": "e6a7",
+      "username": "samyqw",
+      "email": "samyqw12@gmail.com",
+      "password": "Ahmed123!"
+    },
+    {
+      "id": "89cf",
+      "username": "mnams",
+      "email": "mnams12@gmail.com",
+      "password": "Ahmed123!"
+    },
+    {
+      "id": "d46f",
+      "username": "sffssf",
+      "email": "sffssf12@gmail.com",
+      "password": "Ahmed123!"
+    },
+    {
+      "id": "6458",
+      "username": "ahdbbd",
+      "email": "ass23@gmail.com",
+      "password": "Ahmed123!"
     }
   ]
 }

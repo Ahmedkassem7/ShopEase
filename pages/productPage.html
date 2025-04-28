@@ -42,7 +42,16 @@
           </li>
         </ul>
         <div class="d-flex align-items-center nav-icons mt-2 mt-lg-0">
-          <i class="bi bi-search"></i>
+          <div class="dropdown">
+            <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person"></i>
+            </button>
+            <ul class="dropdown-menu ">
+              <li class="text-center">Ahmed Kassem</li>
+
+
+            </ul>
+          </div>
           <a href="./register.html " class="text-reset" id="Account"><i class="bi bi-person"></i></a>
           <a href="./cart.html" class="text-reset"><i class="bi bi-bag"></i></a>
           <i class="bi bi-box-arrow-right text-reset " id="logout"></i>
@@ -115,7 +124,9 @@
           <button class="btn rounded-5 px-4" data-size="XXL">XXL</button>
         </div>
         <div class="row mt-4">
-          <button class="btn btn-danger rounded-5 p-2">Add To Cart</button>
+          <button class="btn btn-danger rounded-5 p-2 buy-now" id="addToCartBtn" data-id="">Add To Cart</button>
+
+
         </div>
         <div class="row mt-4">
           <h5 class="text-danger">Description</h5>

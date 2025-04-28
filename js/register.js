@@ -3,10 +3,20 @@ const usernameInput = document.getElementById("username");
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const confirmInput = document.getElementById("confirm");
+const toastElement = document.getElementById("toast");
+const toastBody = document.getElementById("toast-body");
+
+// Function to show toast
+function showToast(message, bgColor = "bg-danger") {
+  toastElement.className = `toast align-items-center text-white ${bgColor} border-0`;
+  toastBody.textContent = message;
+  const toast = new bootstrap.Toast(toastElement);
+  toast.show();
+}
 
 function createErrorElement(input) {
   const error = document.createElement("small");
-  error.className = "text-danger  mt-1";
+  error.className = "text-danger mt-1";
   error.style.display = "none";
   input.parentNode.appendChild(error);
   return error;
@@ -28,6 +38,15 @@ function validateUsername() {
     usernameError.textContent = "Username must be at least 3 characters.";
     usernameError.style.display = "block";
     return false;
+  } else if (/\d/.test(value)) {
+    usernameError.textContent = "Username must not contain numbers.";
+    usernameError.style.display = "block";
+    return false;
+  } else if (!/^[a-zA-Z_]+$/.test(value)) {
+    usernameError.textContent =
+      "Username can only contain letters and underscores.";
+    usernameError.style.display = "block";
+    return false;
   }
   usernameError.style.display = "none";
   return true;
@@ -35,13 +54,13 @@ function validateUsername() {
 
 function validateEmail() {
   const value = emailInput.value.trim();
-  const emailRegex = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
+  const emailRegex = /^[\w.-]+@gmail\.com$/i;
   if (!value) {
     emailError.textContent = "Email is required.";
     emailError.style.display = "block";
     return false;
   } else if (!emailRegex.test(value)) {
-    emailError.textContent = "Invalid email format.";
+    emailError.textContent = "Email must be like 'asd12@gmail.com'.";
     emailError.style.display = "block";
     return false;
   }
@@ -51,14 +70,14 @@ function validateEmail() {
 
 function validatePassword() {
   const value = passwordInput.value;
-  const strongPasswordRegex = /^(?=.*[A-Z])(?=.*\d).{6,}$/;
+  const strongPasswordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
   if (!value) {
     passwordError.textContent = "Password is required.";
     passwordError.style.display = "block";
     return false;
   } else if (!strongPasswordRegex.test(value)) {
     passwordError.textContent =
-      "Password must be at least 6 characters, include a number and an uppercase letter.";
+      "Password must be 8+ chars, include uppercase, number, and special character (!@#$%^&*).";
     passwordError.style.display = "block";
     return false;
   }
@@ -84,7 +103,6 @@ function validateConfirmPassword() {
 
 function addValidationListeners(input, validateFunc) {
   input.addEventListener("input", validateFunc);
-  // input.addEventListener("change", validateFunc);
 }
 
 addValidationListeners(usernameInput, validateUsername);
@@ -109,6 +127,7 @@ form.addEventListener("submit", async function (e) {
     !isPasswordValid ||
     !isConfirmValid
   ) {
+    showToast("Please fix the errors in the form.");
     return;
   }
 
@@ -118,12 +137,17 @@ form.addEventListener("submit", async function (e) {
 
   try {
     const response = await fetch("http://localhost:3000/users");
-    const users = await response.json();
+    if (!response.ok) throw new Error("Failed to fetch users.");
 
-    const existingUser = users.find((user) => user.email === email);
+    const users = await response.json();
+    const existingUser = users.find(
+      (user) => user.email.toLowerCase() === email.toLowerCase()
+    );
+
     if (existingUser) {
       emailError.textContent = "Email already exists.";
       emailError.style.display = "block";
+      showToast("Email already exists. Try a different one.");
       return;
     }
 
@@ -136,14 +160,15 @@ form.addEventListener("submit", async function (e) {
     });
 
     if (res.ok) {
-      location.href = "/pages/login.html";
-      alert("Registered successfully!");
-      form.reset();
+      window.location.href = "/pages/login.html";
+
+      showToast("Registered successfully! Redirecting...", "bg-success");
+      // form.reset();
     } else {
-      alert("Something went wrong. Try again.");
+      showToast("Something went wrong. Please try again.");
     }
   } catch (err) {
     console.error("Error:", err);
-    alert("Server error. Is JSON Server running?");
+    showToast("Server error. Check if backend is running.");
   }
 });
