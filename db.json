@@ -763,15 +763,50 @@
           "productId": "6428ebc6dc1175abc65ca0b9",
           "name": "Woman Shawl",
           "price": 191,
-          "quantity": 2,
+          "quantity": 5,
           "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403397482-1.jpeg"
         },
         {
           "productId": "6428eb43dc1175abc65ca0b3",
           "name": "Woman Shawl",
           "price": 149,
-          "quantity": 2,
+          "quantity": 3,
           "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
+        },
+        {
+          "productId": "6428c320dc1175abc65ca008",
+          "name": "Crew Neck Long Sleeve Men's Knitwear Sweater",
+          "price": 449,
+          "quantity": 8,
+          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392991339-2.jpeg"
+        },
+        {
+          "productId": "6428c0fedc1175abc65c9ffd",
+          "name": "Crew Neck Long Sleeve Striped Men's Tricot Sweater",
+          "price": 599,
+          "quantity": 7,
+          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392445792-2.jpeg"
+        },
+        {
+          "productId": "6428c042dc1175abc65c9ff7",
+          "name": "Crew Neck Long Sleeve Men's Tricot Sweater with Color Block",
+          "price": 549,
+          "quantity": 10,
+          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392258020-2.jpeg"
+        },
+        {
+          "productId": "6428c3b8dc1175abc65ca00e",
+          "name": "Slim Fit Long Sleeve Dobby Men's Shirt",
+          "price": 549,
+          "quantity": 1,
+          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680393143751-1.jpeg"
+        },
+        {
+          "productId": "6428ead5dc1175abc65ca0ad",
+          "name": "Woman Shawl",
+          "price": 149,
+          "quantity": 1,
+          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403156555-3.jpeg"
         }
       ]
     }

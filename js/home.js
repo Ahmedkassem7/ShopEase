@@ -1,4 +1,7 @@
 import { showCustomAlert } from "./alerts.js";
+window.addEventListener("beforeunload", () => {
+  console.log("Page is unloading...");
+});
 function checkUser() {
   const user = localStorage.getItem("user");
   // if (!user) {
@@ -138,29 +141,51 @@ document.addEventListener("click", async (e) => {
     e.preventDefault();
     e.stopPropagation();
 
-    const productId = e.target.dataset.id;
-    console.log("productId", productId);
+    const button = e.target;
+    const originalText = button.textContent;
+    button.textContent = "Adding...";
+    button.disabled = true;
 
+    const productId = button.dataset.id;
+    const currentUser = JSON.parse(localStorage.getItem("user"));
+
+    if (!currentUser) {
+      showCustomAlert(
+        "warning",
+        "Warning!",
+        "You must login first.",
+        3000,
+        "top-right"
+      );
+      button.textContent = originalText;
+      button.disabled = false;
+      return;
+    }
+
+    // ✅ 1. Update UI & show alert first
+    showCustomAlert(
+      "success",
+      "Added!",
+      "Product has been added to your cart.",
+      3000,
+      "top-right"
+    );
+
+    // ✅ 2. Restore button state quickly
+    setTimeout(() => {
+      button.textContent = originalText;
+      button.disabled = false;
+    }, 1500);
+
+    // ✅ 3. Fetch product and update cart in background
     try {
       const response = await fetch(
         `https://ecommerce.routemisr.com/api/v1/products/${productId}`
       );
-      if (!response.ok) throw new Error("Network response was not ok");
+      if (!response.ok) throw new Error("Failed to fetch product");
 
       const data = await response.json();
       const productData = data.data;
-
-      const currentUser = JSON.parse(localStorage.getItem("user"));
-      if (!currentUser) {
-        showCustomAlert(
-          "warning",
-          "Warning!",
-          "You must login first.",
-          3000,
-          "top-right"
-        );
-        return;
-      }
 
       const userId = currentUser.id;
       const product = {
@@ -189,23 +214,13 @@ document.addEventListener("click", async (e) => {
         updatedCart.push(product);
       }
 
-      try {
-        await fetch(`http://localhost:3000/users/${userId}`, {
-          method: "PATCH",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ cart: updatedCart }),
-        });
-      } catch (error) {
-        console.error("Error updating cart:", error);
-      }
-
-      const toast = document.getElementById("toast");
-      if (toast) {
-        toast.classList.add("show");
-        setTimeout(() => toast.classList.remove("show"), 4000);
-      }
+      await fetch(`http://localhost:3000/users/${userId}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ cart: updatedCart }),
+      });
     } catch (error) {
-      console.error("Error fetching product:", error);
+      console.error("Error updating cart:", error);
     }
   }
 });

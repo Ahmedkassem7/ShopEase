@@ -175,21 +175,20 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProducts();
   });
 });
+
 document.addEventListener("click", async (e) => {
   if (e.target.classList.contains("buy-now")) {
-    const productId = e.target.dataset.id;
-    // console.log("productId", productId);
-    const response = await fetch(
-      `https://ecommerce.routemisr.com/api/v1/products/${productId}`
-    );
+    e.preventDefault();
+    e.stopPropagation();
 
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-    const data = await response.json();
-    const productData = data.data;
-    // console.log("productData", productData);
+    const button = e.target;
+    const originalText = button.textContent;
+    button.textContent = "Adding...";
+    button.disabled = true;
+
+    const productId = button.dataset.id;
     const currentUser = JSON.parse(localStorage.getItem("user"));
+
     if (!currentUser) {
       showCustomAlert(
         "warning",
@@ -198,45 +197,74 @@ document.addEventListener("click", async (e) => {
         3000,
         "top-right"
       );
+      button.textContent = originalText;
+      button.disabled = false;
       return;
     }
-    const userId = currentUser.id;
-    const product = {
-      productId,
-      name: productData.title,
-      price: productData.price,
-      quantity: 1,
-      image: productData.images[0],
-    };
 
-    const res = await fetch(`http://localhost:3000/users/${userId}`);
-    const user = await res.json();
-    const updatedCart = user.cart || [];
-    const existing = updatedCart.find((p) => p.productId === productId);
-    if (existing) {
-      existing.quantity += 1;
-    } else {
-      updatedCart.push(product);
-    }
-
+    // ✅ 1. Update UI & show alert first
     showCustomAlert(
       "success",
-      "Success!",
-      "Product added to cart successfully!",
+      "Added!",
+      "Product has been added to your cart.",
       3000,
       "top-right"
     );
-    setTimeout(async () => {
+
+    // ✅ 2. Restore button state quickly
+    setTimeout(() => {
+      button.textContent = originalText;
+      button.disabled = false;
+    }, 1500);
+
+    // ✅ 3. Fetch product and update cart in background
+    try {
+      const response = await fetch(
+        `https://ecommerce.routemisr.com/api/v1/products/${productId}`
+      );
+      if (!response.ok) throw new Error("Failed to fetch product");
+
+      const data = await response.json();
+      const productData = data.data;
+
+      const userId = currentUser.id;
+      const product = {
+        productId,
+        name: productData.title,
+        price: productData.price,
+        quantity: 1,
+        image: productData.images[0],
+      };
+
+      let updatedCart = [];
+      try {
+        const res = await fetch(`http://localhost:3000/users/${userId}`);
+        if (!res.ok) throw new Error("Fetching user failed");
+
+        const user = await res.json();
+        updatedCart = user.cart || [];
+      } catch (error) {
+        console.error("Error fetching user:", error);
+      }
+
+      const existing = updatedCart.find((p) => p.productId === productId);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        updatedCart.push(product);
+      }
+
       await fetch(`http://localhost:3000/users/${userId}`, {
         method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ cart: updatedCart }),
       });
-    });
+    } catch (error) {
+      console.error("Error updating cart:", error);
+    }
   }
 });
+
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("view-product")) {
     const productId = e.target.dataset.id;
