@@ -137,10 +137,11 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="row justify-content-between">
                 <div class="col-lg-8">
                   <div class="price-container">
-                    <span class="original-price">$${(
+                  <span class="original-price">$${product.price}</span>
+                    <span class=" discounted-price">$${(
                       product.price * 0.8
                     ).toFixed(1)}</span>
-                    <span class="discounted-price">$${product.price}</span>
+                    
                   </div>
                   <div class="product-rating">
                     <span class="stars">${"★".repeat(
