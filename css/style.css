@@ -129,7 +129,8 @@
 }
 
 .buy-now {
-    background: #ea384c;
+    /* background: #ea384c; */
+    background: #f1683a;
     color: white;
     border: none;
     padding: 0.5rem 2rem;
@@ -138,7 +139,7 @@
 }
 
 .buy-now:hover {
-    background: #d1293d;
+    background: #f1683a85;
 }
 
 .card-body {
@@ -217,7 +218,7 @@
 .guarantee-icon {
     width: 70px;
     height: 70px;
-    background-color: #f1683a;
+    background-color: #a09595;
     color: #fff;
     border-radius: 50%;
     font-size: 30px;
@@ -425,4 +426,18 @@ product-img {
 
 .payment-methods i:hover {
     opacity: 1;
+}
+
+
+.btn-home {
+    background-color: #f1683a;
+    color: #ffffff;
+
+    transition: all 0.3s ease;
+
+}
+
+.btn-home:hover {
+    background-color: #e34d1bc7;
+    color: white;
 }
