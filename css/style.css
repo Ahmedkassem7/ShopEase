@@ -394,3 +394,35 @@ product-img {
 .payment-icons img {
     width: 30px;
 }
+
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+/* ------------------------------ */
+
+
+.hover-primary {
+    transition: color 0.3s ease;
+}
+
+.hover-primary:hover {
+    color: #f1683a !important;
+}
+
+.social-icons a {
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+.payment-methods i {
+    font-size: 1.25rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.payment-methods i:hover {
+    opacity: 1;
+}

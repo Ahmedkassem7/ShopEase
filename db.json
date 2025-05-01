@@ -22,13 +22,6 @@
       "cart": []
     },
     {
-      "id": "6758",
-      "username": "Ali",
-      "email": "Ali123@gmail.com",
-      "password": "Ahmed123",
-      "cart": []
-    },
-    {
       "id": "0083",
       "username": "sara",
       "email": "sara@gmail.com",
@@ -39,13 +32,6 @@
       "id": "0a33",
       "username": "Samy Ahmed",
       "email": "samyah123@gmail.com",
-      "password": "Ahmed123",
-      "cart": []
-    },
-    {
-      "id": "5262",
-      "username": "aliMohamed",
-      "email": "aliMohamed123@gmail.com",
       "password": "Ahmed123",
       "cart": []
     },
@@ -174,118 +160,489 @@
       "username": "Ahmed",
       "email": "ahmed@gmail.com",
       "password": "Ahmed123",
-      "cart": [
+      "cart": [],
+      "orders": [
         {
-          "productId": "6428eb43dc1175abc65ca0b3",
-          "name": "Woman Shawl",
-          "price": 149,
-          "quantity": 10,
-          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
+          "id": 1746100163782,
+          "items": [
+            {
+              "productId": "6428eb43dc1175abc65ca0b3",
+              "name": "Woman Shawl",
+              "price": 149,
+              "quantity": 10,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
+            },
+            {
+              "productId": "6428cb19dc1175abc65ca031",
+              "name": "Salah Track Top",
+              "price": 1749,
+              "quantity": 10,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680395033000-2.jpeg"
+            },
+            {
+              "productId": "6428c320dc1175abc65ca008",
+              "name": "Crew Neck Long Sleeve Men's Knitwear Sweater",
+              "price": 449,
+              "quantity": 11,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392991339-2.jpeg"
+            },
+            {
+              "productId": "6428c042dc1175abc65c9ff7",
+              "name": "Crew Neck Long Sleeve Men's Tricot Sweater with Color Block",
+              "price": 549,
+              "quantity": 3,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392258020-2.jpeg"
+            },
+            {
+              "productId": "6428c3b8dc1175abc65ca00e",
+              "name": "Slim Fit Long Sleeve Dobby Men's Shirt",
+              "price": 549,
+              "quantity": 3,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680393143751-1.jpeg"
+            },
+            {
+              "productId": "6428c0fedc1175abc65c9ffd",
+              "name": "Crew Neck Long Sleeve Striped Men's Tricot Sweater",
+              "price": 599,
+              "quantity": 7,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392445792-2.jpeg"
+            },
+            {
+              "productId": "6428bf40dc1175abc65c9ff1",
+              "name": "Polo Collar Short Sleeve Color Block Men's Knitwear Sweater",
+              "price": 349,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680391999434-1.jpeg"
+            },
+            {
+              "productId": "6428bd0bdc1175abc65c9fdb",
+              "name": "Standard Pattern Plaid Fleece Men's Pajamas Set",
+              "price": 699,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680391434704-2.jpeg"
+            },
+            {
+              "productId": "6408e1266406cd15828e8f1c",
+              "name": "PS5 DualSense Charging Station",
+              "price": 1045,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1678303526286-1.jpeg"
+            },
+            {
+              "productId": "6428e319dc1175abc65ca06d",
+              "name": "Woman Karma Socks Multicolour",
+              "price": 199,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680401176767-2.jpeg"
+            },
+            {
+              "productId": "6408e98e6406cd15828e8f30",
+              "name": "Archer VR300 AC1200 Wireless VDSL/ADSL Modem Router Black",
+              "price": 1699,
+              "quantity": 3,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1678305677267-3.jpeg"
+            },
+            {
+              "productId": "6428e884dc1175abc65ca096",
+              "name": "Woman Shawl",
+              "price": 349,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680402563676-2.jpeg"
+            },
+            {
+              "productId": "6428dfa0dc1175abc65ca067",
+              "name": "Logo T-Shirt Green",
+              "price": 744,
+              "quantity": 3,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680400287765-1.jpeg"
+            },
+            {
+              "productId": "6428c962dc1175abc65ca025",
+              "name": "Duramo 10 Running Shoes",
+              "price": 1999,
+              "quantity": 6,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680394593459-1.jpeg"
+            },
+            {
+              "productId": "6428ebc6dc1175abc65ca0b9",
+              "name": "Woman Shawl",
+              "price": 191,
+              "quantity": 4,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403397482-1.jpeg"
+            },
+            {
+              "productId": "6428ead5dc1175abc65ca0ad",
+              "name": "Woman Shawl",
+              "price": 149,
+              "quantity": 2,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403156555-3.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 14:49:23",
+          "total": 54432,
+          "status": "Pending"
         },
         {
-          "productId": "6428cb19dc1175abc65ca031",
-          "name": "Salah Track Top",
-          "price": 1749,
-          "quantity": 10,
-          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680395033000-2.jpeg"
+          "id": 1746100329740,
+          "items": [
+            {
+              "productId": "6428c320dc1175abc65ca008",
+              "name": "Crew Neck Long Sleeve Men's Knitwear Sweater",
+              "price": 449,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392991339-2.jpeg"
+            },
+            {
+              "productId": "6428c042dc1175abc65c9ff7",
+              "name": "Crew Neck Long Sleeve Men's Tricot Sweater with Color Block",
+              "price": 549,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392258020-2.jpeg"
+            },
+            {
+              "productId": "6428c0fedc1175abc65c9ffd",
+              "name": "Crew Neck Long Sleeve Striped Men's Tricot Sweater",
+              "price": 599,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392445792-2.jpeg"
+            },
+            {
+              "productId": "6428c3b8dc1175abc65ca00e",
+              "name": "Slim Fit Long Sleeve Dobby Men's Shirt",
+              "price": 549,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680393143751-1.jpeg"
+            },
+            {
+              "productId": "6428bf40dc1175abc65c9ff1",
+              "name": "Polo Collar Short Sleeve Color Block Men's Knitwear Sweater",
+              "price": 349,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680391999434-1.jpeg"
+            },
+            {
+              "productId": "6428e778dc1175abc65ca08a",
+              "name": "Woman Brown Long Sleeve Tunic LT.CAMEL",
+              "price": 499,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680402296306-3.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 14:52:09",
+          "total": 2994,
+          "status": "Pending"
         },
         {
-          "productId": "6428c320dc1175abc65ca008",
-          "name": "Crew Neck Long Sleeve Men's Knitwear Sweater",
-          "price": 449,
-          "quantity": 11,
-          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392991339-2.jpeg"
+          "id": 1746102402461,
+          "items": [
+            {
+              "productId": "6428c0fedc1175abc65c9ffd",
+              "name": "Crew Neck Long Sleeve Striped Men's Tricot Sweater",
+              "price": 599,
+              "quantity": 2,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392445792-2.jpeg"
+            },
+            {
+              "productId": "6428c320dc1175abc65ca008",
+              "name": "Crew Neck Long Sleeve Men's Knitwear Sweater",
+              "price": 449,
+              "quantity": 2,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392991339-2.jpeg"
+            },
+            {
+              "productId": "6428c3b8dc1175abc65ca00e",
+              "name": "Slim Fit Long Sleeve Dobby Men's Shirt",
+              "price": 549,
+              "quantity": 2,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680393143751-1.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:26:42",
+          "total": 3194,
+          "status": "Pending"
         },
         {
-          "productId": "6428c042dc1175abc65c9ff7",
-          "name": "Crew Neck Long Sleeve Men's Tricot Sweater with Color Block",
-          "price": 549,
-          "quantity": 3,
-          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392258020-2.jpeg"
+          "id": 1746102670205,
+          "items": [
+            {
+              "productId": "6428c320dc1175abc65ca008",
+              "name": "Crew Neck Long Sleeve Men's Knitwear Sweater",
+              "price": 449,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392991339-2.jpeg"
+            },
+            {
+              "productId": "6428c0fedc1175abc65c9ffd",
+              "name": "Crew Neck Long Sleeve Striped Men's Tricot Sweater",
+              "price": 599,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392445792-2.jpeg"
+            },
+            {
+              "productId": "6428c3b8dc1175abc65ca00e",
+              "name": "Slim Fit Long Sleeve Dobby Men's Shirt",
+              "price": 549,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680393143751-1.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:31:10",
+          "total": 1597,
+          "status": "Pending"
         },
         {
-          "productId": "6428c3b8dc1175abc65ca00e",
-          "name": "Slim Fit Long Sleeve Dobby Men's Shirt",
-          "price": 549,
-          "quantity": 3,
-          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680393143751-1.jpeg"
+          "id": 1746102813365,
+          "items": [
+            {
+              "productId": "6428eb43dc1175abc65ca0b3",
+              "name": "Woman Shawl",
+              "price": 149,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:33:33",
+          "total": 149,
+          "status": "Pending"
         },
         {
-          "productId": "6428c0fedc1175abc65c9ffd",
-          "name": "Crew Neck Long Sleeve Striped Men's Tricot Sweater",
-          "price": 599,
-          "quantity": 7,
-          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392445792-2.jpeg"
+          "id": 1746103066765,
+          "items": [
+            {
+              "productId": "6428ebc6dc1175abc65ca0b9",
+              "name": "Woman Shawl",
+              "price": 191,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403397482-1.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:37:46",
+          "total": 191,
+          "status": "Pending"
         },
         {
-          "productId": "6428bf40dc1175abc65c9ff1",
-          "name": "Polo Collar Short Sleeve Color Block Men's Knitwear Sweater",
-          "price": 349,
-          "quantity": 1,
-          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680391999434-1.jpeg"
+          "id": 1746103176132,
+          "items": [
+            {
+              "productId": "6428c0fedc1175abc65c9ffd",
+              "name": "Crew Neck Long Sleeve Striped Men's Tricot Sweater",
+              "price": 599,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392445792-2.jpeg"
+            },
+            {
+              "productId": "6428c320dc1175abc65ca008",
+              "name": "Crew Neck Long Sleeve Men's Knitwear Sweater",
+              "price": 449,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392991339-2.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:39:36",
+          "total": 1048,
+          "status": "Pending"
         },
         {
-          "productId": "6428bd0bdc1175abc65c9fdb",
-          "name": "Standard Pattern Plaid Fleece Men's Pajamas Set",
-          "price": 699,
-          "quantity": 1,
-          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680391434704-2.jpeg"
+          "id": 1746103208132,
+          "items": [
+            {
+              "productId": "6428eb43dc1175abc65ca0b3",
+              "name": "Woman Shawl",
+              "price": 149,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:40:08",
+          "total": 149,
+          "status": "Pending"
         },
         {
-          "productId": "6408e1266406cd15828e8f1c",
-          "name": "PS5 DualSense Charging Station",
-          "price": 1045,
-          "quantity": 1,
-          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1678303526286-1.jpeg"
+          "id": 1746103240964,
+          "items": [
+            {
+              "productId": "6428eb43dc1175abc65ca0b3",
+              "name": "Woman Shawl",
+              "price": 149,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:40:40",
+          "total": 149,
+          "status": "Pending"
         },
         {
-          "productId": "6428e319dc1175abc65ca06d",
-          "name": "Woman Karma Socks Multicolour",
-          "price": 199,
-          "quantity": 1,
-          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680401176767-2.jpeg"
+          "id": 1746103377861,
+          "items": [
+            {
+              "productId": "6428eb43dc1175abc65ca0b3",
+              "name": "Woman Shawl",
+              "price": 149,
+              "quantity": 3,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:42:57",
+          "total": 447,
+          "status": "Pending"
         },
         {
-          "productId": "6408e98e6406cd15828e8f30",
-          "name": "Archer VR300 AC1200 Wireless VDSL/ADSL Modem Router Black",
-          "price": 1699,
-          "quantity": 3,
-          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1678305677267-3.jpeg"
+          "id": 1746103527670,
+          "items": [
+            {
+              "productId": "6428ebc6dc1175abc65ca0b9",
+              "name": "Woman Shawl",
+              "price": 191,
+              "quantity": 2,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403397482-1.jpeg"
+            },
+            {
+              "productId": "6428eb43dc1175abc65ca0b3",
+              "name": "Woman Shawl",
+              "price": 149,
+              "quantity": 2,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:45:27",
+          "total": 680,
+          "status": "Pending"
         },
         {
-          "productId": "6428e884dc1175abc65ca096",
-          "name": "Woman Shawl",
-          "price": 349,
-          "quantity": 1,
-          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680402563676-2.jpeg"
+          "id": 1746103574573,
+          "items": [
+            {
+              "productId": "6428c320dc1175abc65ca008",
+              "name": "Crew Neck Long Sleeve Men's Knitwear Sweater",
+              "price": 449,
+              "quantity": 2,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392991339-2.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:46:14",
+          "total": 898,
+          "status": "Pending"
         },
         {
-          "productId": "6428dfa0dc1175abc65ca067",
-          "name": "Logo T-Shirt Green",
-          "price": 744,
-          "quantity": 3,
-          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680400287765-1.jpeg"
+          "id": 1746103600604,
+          "items": [
+            {
+              "productId": "6428eb43dc1175abc65ca0b3",
+              "name": "Woman Shawl",
+              "price": 149,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:46:40",
+          "total": 149,
+          "status": "Pending"
         },
         {
-          "productId": "6428c962dc1175abc65ca025",
-          "name": "Duramo 10 Running Shoes",
-          "price": 1999,
-          "quantity": 5,
-          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680394593459-1.jpeg"
+          "id": 1746103683469,
+          "items": [
+            {
+              "productId": "6428c320dc1175abc65ca008",
+              "name": "Crew Neck Long Sleeve Men's Knitwear Sweater",
+              "price": 449,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392991339-2.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:48:03",
+          "total": 449,
+          "status": "Pending"
         },
         {
-          "productId": "6428ebc6dc1175abc65ca0b9",
-          "name": "Woman Shawl",
-          "price": 191,
-          "quantity": 4,
-          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403397482-1.jpeg"
+          "id": 1746103703548,
+          "items": [
+            {
+              "productId": "6428eb43dc1175abc65ca0b3",
+              "name": "Woman Shawl",
+              "price": 149,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:48:23",
+          "total": 149,
+          "status": "Pending"
         },
         {
-          "productId": "6428ead5dc1175abc65ca0ad",
-          "name": "Woman Shawl",
-          "price": 149,
-          "quantity": 1,
-          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403156555-3.jpeg"
+          "id": 1746103747876,
+          "items": [
+            {
+              "productId": "6428eb43dc1175abc65ca0b3",
+              "name": "Woman Shawl",
+              "price": 149,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:49:07",
+          "total": 149,
+          "status": "Pending"
+        },
+        {
+          "id": 1746103768084,
+          "items": [
+            {
+              "productId": "6428eb43dc1175abc65ca0b3",
+              "name": "Woman Shawl",
+              "price": 149,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:49:28",
+          "total": 149,
+          "status": "Pending"
+        },
+        {
+          "id": 1746103796684,
+          "items": [
+            {
+              "productId": "6428eb43dc1175abc65ca0b3",
+              "name": "Woman Shawl",
+              "price": 149,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:49:56",
+          "total": 149,
+          "status": "Pending"
+        },
+        {
+          "id": 1746103916333,
+          "items": [
+            {
+              "productId": "6428c320dc1175abc65ca008",
+              "name": "Crew Neck Long Sleeve Men's Knitwear Sweater",
+              "price": 449,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680392991339-2.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:51:56",
+          "total": 449,
+          "status": "Pending"
+        },
+        {
+          "id": 1746103951916,
+          "items": [
+            {
+              "productId": "6428eb43dc1175abc65ca0b3",
+              "name": "Woman Shawl",
+              "price": 149,
+              "quantity": 1,
+              "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
+            }
+          ],
+          "date": "01/05/2025, 15:52:31",
+          "total": 149,
+          "status": "Pending"
         }
       ]
     },
@@ -314,13 +671,6 @@
       "id": "a425",
       "username": "dsadasd",
       "email": "dsasa@dsasa.com",
-      "password": "Ahmed123",
-      "cart": []
-    },
-    {
-      "id": "1ebc",
-      "username": "AliAhmed",
-      "email": "Ali1236@gmail.com",
       "password": "Ahmed123",
       "cart": []
     },
@@ -368,12 +718,6 @@
       ]
     },
     {
-      "id": "46ed",
-      "username": "alaa",
-      "email": "ali@t.com",
-      "password": "ALIahmed123"
-    },
-    {
       "id": "9f50",
       "username": "333",
       "email": "dxdc@gmail.comcom",
@@ -408,6 +752,28 @@
       "username": "ahdbbd",
       "email": "ass23@gmail.com",
       "password": "Ahmed123!"
+    },
+    {
+      "id": "bdbd",
+      "username": "Ali",
+      "email": "AliAs@gmail.com",
+      "password": "Ahmed123!",
+      "cart": [
+        {
+          "productId": "6428ebc6dc1175abc65ca0b9",
+          "name": "Woman Shawl",
+          "price": 191,
+          "quantity": 2,
+          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403397482-1.jpeg"
+        },
+        {
+          "productId": "6428eb43dc1175abc65ca0b3",
+          "name": "Woman Shawl",
+          "price": 149,
+          "quantity": 2,
+          "image": "https://ecommerce.routemisr.com/Route-Academy-products/1680403266805-1.jpeg"
+        }
+      ]
     }
   ]
 }
