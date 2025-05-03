@@ -62,3 +62,19 @@ json-server --watch db.json
 ### 4- Run the App
 
 ## Open the index.html file in your browser to start using the platform.
+
+---
+
+## 🧠 Lessons Learned
+
+- **Developed a complete multi-page e-commerce UI using vanilla web technologies.**
+- **Implemented a full user flow from registration to order confirmation.**
+- **Used JSON Server as a mock backend for realistic API simulation.**
+- **Focused on interactive UX with dynamic product rendering and alert feedback.**
+
+## 📌 Future Improvements
+
+- **Admin dashboard for product and order management.**
+- **Backend integration using Node.js, Firebase, or a real database.**
+- **Secure payment gateway integration.**
+- **User profile page with order history.**
