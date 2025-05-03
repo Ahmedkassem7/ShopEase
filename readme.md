@@ -43,23 +43,22 @@ Copy
 Edit
 npm install -g json-server
 json-server --watch db.json
-Open index.html in your browser to begin using the platform.
-
-🧠 Lessons Learned
-Built a multi-page e-commerce UI using vanilla web technologies
-
-Implemented full user flow from registration to order confirmation
-
-Worked with local JSON Server for simulating backend APIs
-
-Focused on user experience with dynamic content and alert feedback
-
-📌 Future Improvements
-Admin dashboard for product and order management
-
-Integration with real API or backend (Node.js / Firebase)
-
-Payment gateway integration
-
-User profile and order history page
 ```
+
+### 2- Install JSON Server globally.
+
+```bash
+npm install -g json-server
+
+```
+
+### 3- Start the JSON Server.
+
+```bash
+json-server --watch db.json
+
+```
+
+### 4- Run the App
+
+## Open the index.html file in your browser to start using the platform.
